@@ -1,0 +1,110 @@
+{
+    "input_dir": "/data/datascience/users/hschuhl/rice_morphology/masks",
+    "json": "/data/datascience/users/hschuhl/rice_morphology/data/rice_week2_morph_w_curvature.json",
+    "filename_metadata": ["treatment", "id"],
+    "workflow": "./plantcv-rice-morphology.py",
+    "img_outdir": "/data/datascience/users/hschuhl/rice_morphology/debug_80/",
+    "include_all_subdirs": true,
+    "tmp_dir": ".",
+    "start_date": null,
+    "end_date": null,
+    "imgformat": "png",
+    "delimiter": "-",
+	"metadata_filters": {},
+	"timestampformat": "%Y-%m-%dT%H:%M:%S.%fZ",
+    "writeimg": false,
+    "other_args": {},
+    "groupby": ["filepath"],
+    "group_name": "auto",
+    "cleanup": true,
+    "append": true,
+    "cluster": "HTCondorCluster",
+    "cluster_config": {
+        "n_workers": 51,
+        "cores": 1,
+        "memory": "1GB",
+        "disk": "1GB",
+        "local_directory": null,
+        "log_directory": "logs",
+		"local_directory": "$_CONDOR_SCRATCH_DIR",
+        "job_extra_directives": {"getenv": "true"}
+    },
+
+    "metadata_terms": {
+        "camera": {
+            "label": "camera identifier",
+            "datatype": "<class 'str'>",
+            "value": "none"
+        },
+        "imgtype": {
+            "label": "image type",
+            "datatype": "<class 'str'>",
+            "value": "none"
+        },
+        "zoom": {
+            "label": "camera zoom setting",
+            "datatype": "<class 'str'>",
+            "value": "none"
+        },
+        "exposure": {
+            "label": "camera exposure setting",
+            "datatype": "<class 'str'>",
+            "value": "none"
+        },
+        "gain": {
+            "label": "camera gain setting",
+            "datatype": "<class 'str'>",
+            "value": "none"
+        },
+        "frame": {
+            "label": "image series frame identifier",
+            "datatype": "<class 'str'>",
+            "value": "none"
+        },
+        "rotation": {
+            "label": "sample rotation in degrees",
+            "datatype": "<class 'str'>",
+            "value": "none"
+        },
+        "lifter": {
+            "label": "imaging platform height setting",
+            "datatype": "<class 'str'>",
+            "value": "none"
+        },
+        "timestamp": {
+            "label": "datetime of image",
+            "datatype": "<class 'datetime.datetime'>",
+            "value": null
+        },
+        "id": {
+            "label": "image identifier",
+            "datatype": "<class 'str'>",
+            "value": "none"
+        },
+        "barcode": {
+            "label": "plant barcode identifier",
+            "datatype": "<class 'str'>",
+            "value": "none"
+        },
+        "treatment": {
+            "label": "treatment identifier",
+            "datatype": "<class 'str'>",
+            "value": "none"
+        },
+        "cartag": {
+            "label": "plant carrier identifier",
+            "datatype": "<class 'str'>",
+            "value": "none"
+        },
+        "measurementlabel": {
+            "label": "experiment identifier",
+            "datatype": "<class 'str'>",
+            "value": "none"
+        },
+        "other": {
+            "label": "other identifier",
+            "datatype": "<class 'str'>",
+            "value": "none"
+        }
+    }
+}
